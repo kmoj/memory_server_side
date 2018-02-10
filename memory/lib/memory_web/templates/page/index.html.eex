@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-11">
+        <h1>Join A Game</h1>
+        <p>Game name: </p>
+        <p>
+            <input id="gameName">
+            <button type="button" onclick="toGames()">Submit</button>
+        </p>
+    </div>
+</div>
+
+
+<script>
+function toGames() {
+    var gameName;
+
+    gameName = document.getElementById("gameName").value;
+    self.location= '/games/' + gameName;
+
+}
+</script>
