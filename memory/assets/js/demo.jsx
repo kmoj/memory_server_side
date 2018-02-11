@@ -74,9 +74,9 @@ class Game extends React.Component {
 
         this.channel.push("clickTile", {index: i})
                     .receive("ok", this.gotView.bind(this));
-        setTimeout(()=>{
-                        this.channel.push("unDisable", {index: i})
-                                    .receive("ok", this.gotView.bind(this));},750);
+
+        this.channel.push("unDisable", {index: i})
+                    .receive("ok", this.gotView.bind(this));
 
     }
 

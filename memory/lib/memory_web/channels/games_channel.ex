@@ -28,6 +28,7 @@ defmodule MemoryWeb.GamesChannel do
     game1 = Memory.Game.undisable(game0, i)
     Memory.GameBackup.save(socket.assigns[:name], game1)
     socket = assign(socket, :game, game1)
+    Process.sleep(750)
     {:reply, {:ok, %{"view" => Memory.Game.client_view(game1)}}, socket}
   end
 
